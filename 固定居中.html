@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>固定高度1</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                margin: 0px;
+            }
+            /*外层div固定位置*/
+            #nav{
+                width: 100%;
+                background-color: yellow;
+                /*fixed固定*/
+                position: fixed;
+                top: 0px;
+                
+                /*使用position: fixed; 的时候  能起到固定位置的作用 但是定宽居中失效*/
+            }
+            /*内层div负责定宽居中*/
+            /*使用嵌套div可以固定位置和定宽居中*/
+            #nav div{
+                /*使用空格表示样式嵌套关系选择器*/
+                width: 800px;
+                margin: 0 auto;
+                height: 100px;
+                background-color: red;
+                text-align: center;
+            }
+            /*#main{
+                width: 800px;
+                margin: 0 auto;
+                background-color: blue;
+                height: 2000px;
+            }*/
+            #main{
+                width: 800px;
+                height: 20000px;
+                margin: 100px auto 0 auto;
+                /*下边距向下移动100培训避免遮挡*/
+                background-color: aquamarine;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <div>
+                固定位置导航栏
+            </div>
+            
+        </div>
+        <div id="main">
+            内容区
+        </div>
+    </body>
+</html>
